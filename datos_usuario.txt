@@ -1,1 +1,2 @@
 Usuario=vagrant
+model name	: AMD Ryzen 9 7900 12-Core Processor
