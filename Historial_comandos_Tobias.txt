@@ -1,0 +1,59 @@
+git --version
+cd ~
+cd repogit
+mkdir repogit
+cd repogit
+ssh-keygen
+cat ~/.ssh/id_rsa.pub
+git clone git@github.com:tobicai17/TP_1.git
+cd TP_1
+cat /etc/os-release
+grep -i HOME_URL /etc/os-release > datos_url.txt
+echo "Usuario=$(whoami)" > datos_usuario.txt
+git config --global user.email "tobiaslautaro@gmail.com"
+git config --global user.name "TobiTP"
+git add .
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+git pusch
+git push
+grep "model name" /proc/cpuinfo | head -n 1 >> datos_usuario.txt
+git add datos_usuario.txt
+git commit -m "feat: Añadiendo información de CPU"
+
+cat << EOF > README.md
+Alumno: TuNombre
+División: X
+Turno: Mañana/Tarde/Noche
+EOF
+
+cat << EOF > README.md
+Alumno: TuNombre
+División: X
+Turno: Mañana/Tarde/Noche
+
+cat << EOF > README.md
+Alumno: Tobias
+División: 106
+Turno: Mañana
+EOF
+
+cat << EOF > README.md
+Alumno: Tobias
+División: 106
+Turno: Mañana
+EOF
+
+git add README.md
+git commit -m "ADD: Añadiendo Readme y datos de usuario"
+git push
+mkdir -p materia1/uni{1,2,3} materia2/uni{1,2,3}
+tree materia1 materia2
+sudo apt install tree
+tree materia1 materia2
+ls -R materia1 materia2
+echo 'mkdir -p materia1/uni{1,2,3} materia2/uni{1,2,3}' > script_dir.sh
+chmod +x script_dir.sh
+git add script_dir.sh
+git commit -m "ADD: Añadiendo script para estructura de directorios"
+git push
+history -a
